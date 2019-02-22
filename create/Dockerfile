@@ -1,5 +1,5 @@
 FROM alpine:3.9 AS deploy
-LABEL "name"="create-gh-pages-repo"
+LABEL "name"="create"
 LABEL "maintainer"="Travis Swicegood <travis@domain51.com>"
 LABEL "version"="1.0.0"
 

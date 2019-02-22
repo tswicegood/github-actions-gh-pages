@@ -1,11 +1,9 @@
 #!/bin/bash
 set -e
 
-TARGET_BRANCH=${TARGET_BRANCH:-"gh-pages"}
 DESTINATION=${DESTINATION:-"./public"}
 GH_EMAIL=${GH_EMAIL:-"friendly-bot@example.com"}
 GH_NAME=${GH_NAME:-"Friendly GitHub Action Deploy Bot"}
-REPO_URL=${REPO_URL:-$(git config --get remote.origin.url)}
 GH_PAGES=${GH_PAGES:-$(git show-ref -s origin/gh-pages)}
 GITHUB_SHA=${GITHUB_SHA:-$(git show-ref -s HEAD)}
 

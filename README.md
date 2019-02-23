@@ -9,7 +9,7 @@ This repo contains [GitHub Action][1] for generating gh-pages. It consists of tw
 
 These actions create and publish your `gh-pages` branch inside a `./public` directory. See [Configuration](#Configuration) to learn how to change that directory.
 
-You can use these actions in your workflow like this
+You can use these actions in your workflow like this:
 
 ```workflow
 action "Prep gh-pages" {
@@ -21,9 +21,11 @@ action "Prep gh-pages" {
 
 action "Push gh-pages" {
   uses = "tswicegood/github-actions-gh-pages/push@master"
-  needs = ["Hugo Build"]
+  needs = ["whatever-built-your-site"]
 }
 ```
+
+> Note: You have to enable the `GITHUB_TOKEN` secret on the action that uses `create`. Without that, you can't publish your changes.
 
 ## Configuration
 
